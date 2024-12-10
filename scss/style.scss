@@ -1,0 +1,571 @@
+@charset "utf-8";
+
+/*페이지 공통*/
+:root{
+  font-family:"Krona One";
+  color:#fff;
+  scroll-behavior:smooth;
+}
+body{background:#161616;}
+a{text-decoration:none; color:inherit;}
+.clearfix::after{content:''; display:block; clear:both;}
+
+/*헤더*/
+header{
+  .inner{
+  position:fixed; z-index:99;
+  padding:0 10%; box-sizing:border-box;
+  width:100%; height:80px;
+  display:flex; align-items:center; justify-content:space-between;
+  &.scrolled{background:#000;}
+  }//e:.inner
+  .logo{font-size:18px;}
+  #gnb{
+    font-size:15px;
+    li{display:inline-block;}
+    li:first-child{margin-right:70px;}
+  }
+  .m_burger{display:none;}
+}//e:header
+
+/*메인*/
+#main_view{
+  height:100vh;
+  .text{
+  position:relative; padding-top:15%;
+  font-size:70px; text-align:center;
+  line-height:1.6; letter-spacing:3px;
+  em{font-size:50px;}
+  b{animation:glow 1.5s infinite alternate;}
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #4A90E2, 0 0 20px #4A90E2;
+    }
+    to {
+      text-shadow: 0 0 20px #4A90E2, 0 0 30px #4A90E2;
+    }
+  }
+  }//e:.text
+  .btn{
+    position:relative;
+    margin:0 auto; margin-top:7%;
+    width:270px; height:65px;
+    background:#fff; border-radius:39px;
+    color:#000; text-align:center; line-height:65px;
+    font-size:14px; cursor:pointer;
+    transition:all .3s ease;
+    a{position:relative; z-index:10;}
+  }
+  .btn::before{
+    content:''; position:absolute;
+    top:0; left:0; width:0; height:100%;
+    background:#000; transition:width 0.5s ease;
+    border-radius:30px; z-index:1;
+  }
+  .btn:hover{color:#fff;}
+  .btn:hover::before{width:100%;}
+}//e:#main_view
+
+#main_bg{
+  background:url('../img/bg.png') no-repeat;
+  width:100%; height:1545px; background-size:cover;
+  position:absolute; top:0; right:0;
+  z-index:-99;
+}//e:#main_bg
+
+#profile{
+  padding:0 10%;
+  box-sizing:border-box;
+  .info_box{
+    height:400px;
+    display:flex; justify-content:center;
+    font-family:'Pretendard';
+    font-size:16px; margin-top:50px;
+    em{font-size:22px; font-weight:bold;}
+    li{margin-bottom:15px;}
+    b{font-size:14px;}
+    h3{margin-right:66px; margin-top:30px;}
+    .intro1{
+      position:relative;
+      margin-right:160px; margin-top:135px;
+      li:first-child::before{
+        content:'PROFILE'; display:block;
+        position:absolute; top:-100px; left:-3px;
+        font-size:38px; letter-spacing:4px;
+        font-family:"Krona One";
+      }
+      li:first-child::after{
+        content:''; display:block;
+        position:absolute; top:-40px; left:-3px;
+        width:760px; height:1px; background:#fff;
+      }
+      li:first-child em{margin-right:35px;}
+      li:nth-child(2) em{margin-right:44px;}
+      li:nth-child(3) em{margin-right:60px;}
+      li:last-child em{margin-right:48px;}
+    }//e:.intro1
+    .intro2{margin-top:135px;}
+    .intro2 li:first-child{margin-bottom:22px;}
+    .last_info{line-height:1.4;}
+  }//e:.info_box
+}//e:#profile
+
+#skills{
+  h2{
+    font-size:38px; letter-spacing:4px;
+    text-align:center;
+  }
+  span{position:relative;}
+  span::before{
+    content:''; display:block;
+    width:117px; height:1px; background:#fff;
+    position:absolute; top:80px; left:40px;
+  }
+  .inner{
+    padding:0 10%; height:470px;
+    box-sizing:border-box; margin-top:200px;
+  }
+  .design{
+    margin-top:150px;
+    font-family:'Pretendard';
+    font-size:18px; font-weight:bold;
+    ul{display:flex; justify-content:space-around;}
+    img{margin-right:38px;}
+    em{position:relative;}
+    li{line-height:70px; width:283px !important;}
+    li:first-child em::before{
+      content:'★ ★ ★ ★ ★'; display:block;
+      font-family:"Krona One"; font-size:18px;
+      color:#F7DA64;
+      position:absolute; top:5px; left:0;
+    }
+    li:nth-child(2) em::before{
+      content:'★ ★ ★ ★'; display:block;
+      font-family:"Krona One"; font-size:18px;
+      color:#F7DA64;
+      position:absolute; top:5px; left:0;
+    }
+    li:nth-child(3) em::before{
+      content:'★ ★ ★ ★'; display:block;
+      font-family:"Krona One"; font-size:18px;
+      color:#F7DA64; width:150px;
+      position:absolute; top:5px; left:0;
+    }
+  }//e:.design
+  .publishing{
+    margin-top:85px;
+    font-family:'Pretendard';
+    font-size:18px; font-weight:bold;
+    ul{display:flex; justify-content:space-around;}
+    img{margin-right:38px;}
+    em{position:relative;}
+    li{line-height:70px; width:283px !important;}
+    li:first-child em::before{
+      content:'★ ★ ★ ★ ★'; display:block;
+      font-family:"Krona One"; font-size:18px;
+      color:#F7DA64; width:150px;
+      position:absolute; top:5px; left:0;
+    }
+    li:nth-child(2) em::before{
+      content:'★ ★ ★ ★'; display:block;
+      font-family:"Krona One"; font-size:18px;
+      color:#F7DA64; width:150px;
+      position:absolute; top:5px; left:0;
+    }
+    li:nth-child(3) em::before{
+      content:'★ ★ ★'; display:block;
+      font-family:"Krona One"; font-size:18px;
+      color:#F7DA64; width:150px;
+      position:absolute; top:5px; left:0;
+    }
+  }//e:.publishing
+}//e:#skills
+
+#main_bg2{
+  background:url('../img/bg2.png') no-repeat;
+  width:100%; height:1545px; background-size:cover;
+  position:absolute; top:1700px; left:-500px;
+  z-index:-99; background-position:right;
+}//e:#main_bg
+
+#project{
+  position:relative;
+  margin-top:350px; padding:0 10%;
+  .viewport{overflow:hidden;}
+  .slider-container{
+    margin-top:150px; height:600px;
+    display:flex;
+  }
+  .inner{
+    height:600px;
+    display:flex; justify-content:space-around;
+    font-family:'Pretendard'; box-sizing:border-box;
+    flex-shrink:0; width:100%;
+  }
+  h2{
+    font-size:38px; letter-spacing:4px;
+    text-align:center;
+  }
+  em{position:relative;}
+  em::before{
+    content:''; display:block;
+    width:117px; height:1px; background:#fff;
+    position:absolute; top:80px; left:60px;
+  }
+  .portfolio{
+    width:80%; height:600px;
+    background:rgba(147,147,147,.4);
+    border-radius:20px;
+    margin:0 10% 0 5%;
+    h4{
+      position:relative;
+      font-size:23px; font-weight:bold;
+      line-height:1.4; margin-left:28%; margin-top:40px;
+      margin-bottom:10px;
+    }
+    h4::before{
+      content:'PORTFOLIO'; display:block;
+      width:150px; height:40px; background:#3B7CD3;
+      color:#fff; font-size:15px; font-family:"Krona One";
+      border-radius:39px; line-height:40px; text-align:center;
+      position:absolute; top:0; left:-170px;
+    }
+  }//e:.portfolio
+  .portfolio1{
+    p{
+      width:41vw; height:470px;
+      background:url('../img/project1.png') no-repeat;
+      background-size:contain; background-position:center;
+    }
+  }
+  .portfolio2{
+    p{
+      width:41vw; height:470px;
+      background:url('../img/project2.png') no-repeat;
+      background-size:contain; background-position:center;
+    }
+  }
+  .portfolio3{
+    p{
+      width:41vw; height:470px;
+      background:url('../img/project3.png') no-repeat;
+      background-size:contain; background-position:center;
+    } 
+  }
+  .coment{
+    width:60%; margin-top:300px;
+    font-size:22px; font-weight:bold;
+    line-height:2;
+    .w_btn{
+      position:relative;
+      width:250px; height:65px;
+      font-size:14px; font-family:"Krona One";
+      font-weight:normal; margin-top:60px;
+      background:#fff; border-radius:39px;
+      color:#000; text-align:center; line-height:65px;
+      cursor:pointer;
+      transition:all .3s ease;
+      a{position:relative; z-index:10;}
+    }
+    .w_btn::before{
+      content:''; position:absolute;
+      top:0; left:0; width:0; height:100%;
+      background:#000; transition:width 0.5s ease;
+      border-radius:30px; z-index:1;
+    }
+    .w_btn:hover{color:#fff;}
+    .w_btn:hover::before{width:100%;}
+  }//e:.coment
+  .prev{
+    position:absolute; top:25%; right:29%;
+    cursor:pointer;
+  }
+  .next{
+    position:absolute; top:25%; right:20%;
+    cursor:pointer;
+  }
+  .swiper-pagination{
+    position:absolute; top:27%; right:24%;
+    font-size:24px;
+  }
+
+  /*모바일*/
+  .m_inner{
+    display:none;
+    font-family:'Pretendard';
+    .port{
+      margin-top:130px;
+      width:100%; height:850px;
+      img{
+        width:100%; margin-bottom:60px;
+        background:rgba(147,147,147,.3);
+        border-radius:20px;
+      }
+      p{font-size:22px; font-weight:bold;}
+      span{
+      padding:10px 12px; font-weight:bold;
+      background:#3B7CD3; border-radius:39px;
+      font-family:"Krona One"; vertical-align:middle;
+      font-size:12px; margin-right:20px;
+      }
+      em::before{display:none;}
+      em{
+        margin-top:30px; margin-bottom:100px;
+        line-height:1.8; font-weight:bold;
+        font-size:18px;
+      }
+      .p_txt{
+        margin-left:30px;
+        line-height:2.5;
+        p{margin-bottom:20px;}
+      }
+      .m_btn{margin-top:30px;}
+      .m_btn a{
+        padding:20px 30px; background:#fff; color:#000;
+        font-family:"Krona One"; font-size:12px; font-weight:normal;
+        border-radius:39px; transition:all .3s ease;
+      }
+      .m_btn a:hover{background:#000; color:#fff}
+    }//e:.port
+    .port3{margin-top:160px;}
+  }//e:.m_inner
+}//e:#project
+
+/*하단*/
+footer{
+  background:#000; height:100px;
+  margin-top:120px;
+  text-align:center;
+  .end{padding-top:25px; line-height:1.7;}
+  p{font-size:15px; font-family:'Pretendard';}
+  em{font-size:12px; color:#555555;}
+}//e:footer
+
+
+/*미디어쿼리*/
+@media (max-width:1440px){
+  #main_view{
+    .text{padding-top:20%;}
+  }//e:#main_view
+  #project{
+    .portfolio h4::before{
+    width:120px; left:-135px;
+    font-size:13px;}
+    .prev, .next{
+      img{width:45px;}
+    }
+    .swiper-pagination{font-size:20px; top:26.5%;}
+  }//e:#project
+}//end:@media(1440px)
+
+
+@media (max-width:1024px){
+  #main_view{
+    .text{padding-top:25%;}
+  }
+  #profile{
+    .info_box{
+      flex-wrap:wrap;
+      .intro1{
+        li:first-child::after{width:400px;}
+      }
+      .intro2{margin:20px 0 0 280px;}
+    }
+  }//e:#profile
+  #skills{
+    h2{text-align:left;}
+    span::before{width:350px; left:0;}
+    .inner{margin-top:250px; height:900px;}
+    .design{
+      ul{flex-direction:column;}
+      li{margin-bottom:30px;}
+    }
+    .publishing{
+      margin-top:0;
+      ul{flex-direction:column;}
+      li{margin-bottom:30px;}
+    }
+  }//e:#skills
+
+  #project{
+    margin-top:280px;
+    h2{text-align:left;}
+    em::before{width:350px; left:0;}
+    .portfolio{
+      width:95%; height:500px; margin:0;
+      h4{font-size:20px; margin-left:35%;}
+      p{margin:-50px 20px 0 30px;}
+    }
+    .coment{
+      font-size:18px; margin-top:200px;
+      margin-left:60px;
+      .w_btn{
+        width:200px; font-size:12px;
+      }
+    }
+    .prev, .next{
+      img{width:40px;}
+    }
+    .prev{right:25%;}
+    .next{right:13%;}
+    .swiper-pagination{right:18%;}
+  }//e:#project
+}//end:@media(1024px)
+
+
+@media (max-width:768px){
+  header{
+    .inner{
+      padding:0 5%;
+      #gnb{display:none;}
+      .m_burger{display:block; font-size:23px;}
+    }
+  }//e:header
+  #main_view{
+    .text{
+      padding-top:40%;
+      font-size:60px;
+      em{font-size:40px;}
+    }
+  }//e:#main_view
+  #profile{
+    .info_box{
+      h3{margin-bottom:20px;}
+      margin-top:160px;
+      flex-wrap:nowrap;
+      flex-direction:column;
+      .intro1{
+        margin-bottom:30px;
+        li:first-child{margin-top:20px;}
+        li:first-child::after{top:-30px;}
+      }
+      .intro2{margin:0;}
+    }
+  }//e:#profile
+  #skills{
+    .inner{margin-top:350px;}
+  }//e:#skills
+  #project{
+    .viewport{display:none;}
+    .prev, .next, .swiper-pagination{display:none;}
+    .m_inner{display:block;}
+  }//e:#project
+
+  footer{
+    margin-top:150px;
+  }
+}//end:@media(768px)
+
+
+@media (max-width:430px) {
+  header{
+    .inner{padding:0 3%;}
+  }
+  #main_view{
+    height:800px;
+    .text{
+      padding-left:3%; padding-top:45%;
+      text-align:left;
+      font-size:50px;
+      em{font-size:30px;}
+    }
+    .btn{
+      margin:0; margin-left:3%;
+      margin-top:13%; width:250px;
+    }
+  }//e:#main_view
+  #profile{
+    padding:0 3%;
+    .info_box{
+      h3 img{width:200px;}
+      .intro1{
+        li:first-child::after{width:350px;}
+      }
+    }
+  }//e:#profile
+  #skills{
+    .inner{padding:0 3%;}
+  }
+  #project{
+    padding:0 3%;
+    .m_inner{
+      .port{
+        height:700px;
+        p{font-size:18px;}
+        .p_txt{margin-left:10px;}
+      }
+      .port3{margin-top:140px;}
+    }//e:.m_inner
+  }
+  footer{
+    margin-top:100px;
+    p{font-size:13px;}
+    em{font-size:10px;}
+  }
+}//end:@media(430px)
+
+
+@media (max-width:320px) {
+  header{
+    .inner{padding:0;}
+    .logo{font-size:15px;}
+  }//e:header
+  #main_view{
+    height:700px;
+    .text{
+      padding-left:0; letter-spacing:1px;
+      em{font-size:25px;}
+      b{font-size:45px;}
+    }
+    .btn{
+      margin-left:0; margin-top:17%;
+      width:240px; font-size:13px;
+    }
+  }//e:#main_view
+  #profile{
+    padding:0;
+    .info_box{
+      .intro1{
+        li{width:300px;}
+        em{font-size:18px;}
+        li:first-child::after{width:280px;}
+        li:first-child em{margin-right:36px;}
+        li:nth-child(3) em{margin-right:57px;}
+        li:first-child::before{font-size:30px;}
+      }
+    }
+  }//e:#profile
+  #skills{
+    h2{font-size:30px;}
+    span::before{width:280px;}
+    .inner{padding:0;}
+    .design{
+      img{width:80px;}
+    }
+    .publishing{
+      img{width:80px;}
+    }
+  }//e:#skills
+  #project{
+    margin-top:120px;
+    padding:0;
+    h2{font-size:30px;}
+    em::before{width:280px;}
+    .m_inner{
+      .port{
+        height:570px;
+        em{font-size:15px;}
+        .p_txt{
+          margin:0;
+        }
+      }
+    }
+    .port2{margin-bottom:190px;}
+  }//e:#project
+  footer{
+    margin-top:150px;
+    .end{
+      p{display:none;}
+    }
+  }
+}//end:@meida(320px)

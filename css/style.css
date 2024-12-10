@@ -1,0 +1,892 @@
+@charset "UTF-8";
+/*페이지 공통*/
+:root {
+  font-family: "Krona One";
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #161616;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*헤더*/
+header .inner {
+  position: fixed;
+  z-index: 99;
+  padding: 0 10%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .inner.scrolled {
+  background: #000;
+}
+header .logo {
+  font-size: 18px;
+}
+header #gnb {
+  font-size: 15px;
+}
+header #gnb li {
+  display: inline-block;
+}
+header #gnb li:first-child {
+  margin-right: 70px;
+}
+header .m_burger {
+  display: none;
+}
+
+/*메인*/
+#main_view {
+  height: 100vh;
+}
+#main_view .text {
+  position: relative;
+  padding-top: 15%;
+  font-size: 70px;
+  text-align: center;
+  line-height: 1.6;
+  letter-spacing: 3px;
+}
+#main_view .text em {
+  font-size: 50px;
+}
+#main_view .text b {
+  animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #4A90E2, 0 0 20px #4A90E2;
+  }
+  to {
+    text-shadow: 0 0 20px #4A90E2, 0 0 30px #4A90E2;
+  }
+}
+#main_view .btn {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 7%;
+  width: 270px;
+  height: 65px;
+  background: #fff;
+  border-radius: 39px;
+  color: #000;
+  text-align: center;
+  line-height: 65px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#main_view .btn a {
+  position: relative;
+  z-index: 10;
+}
+#main_view .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #000;
+  transition: width 0.5s ease;
+  border-radius: 30px;
+  z-index: 1;
+}
+#main_view .btn:hover {
+  color: #fff;
+}
+#main_view .btn:hover::before {
+  width: 100%;
+}
+
+#main_bg {
+  background: url("../img/bg.png") no-repeat;
+  width: 100%;
+  height: 1545px;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -99;
+}
+
+#profile {
+  padding: 0 10%;
+  box-sizing: border-box;
+}
+#profile .info_box {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  font-family: "Pretendard";
+  font-size: 16px;
+  margin-top: 50px;
+}
+#profile .info_box em {
+  font-size: 22px;
+  font-weight: bold;
+}
+#profile .info_box li {
+  margin-bottom: 15px;
+}
+#profile .info_box b {
+  font-size: 14px;
+}
+#profile .info_box h3 {
+  margin-right: 66px;
+  margin-top: 30px;
+}
+#profile .info_box .intro1 {
+  position: relative;
+  margin-right: 160px;
+  margin-top: 135px;
+}
+#profile .info_box .intro1 li:first-child::before {
+  content: "PROFILE";
+  display: block;
+  position: absolute;
+  top: -100px;
+  left: -3px;
+  font-size: 38px;
+  letter-spacing: 4px;
+  font-family: "Krona One";
+}
+#profile .info_box .intro1 li:first-child::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -40px;
+  left: -3px;
+  width: 760px;
+  height: 1px;
+  background: #fff;
+}
+#profile .info_box .intro1 li:first-child em {
+  margin-right: 35px;
+}
+#profile .info_box .intro1 li:nth-child(2) em {
+  margin-right: 44px;
+}
+#profile .info_box .intro1 li:nth-child(3) em {
+  margin-right: 60px;
+}
+#profile .info_box .intro1 li:last-child em {
+  margin-right: 48px;
+}
+#profile .info_box .intro2 {
+  margin-top: 135px;
+}
+#profile .info_box .intro2 li:first-child {
+  margin-bottom: 22px;
+}
+#profile .info_box .last_info {
+  line-height: 1.4;
+}
+
+#skills h2 {
+  font-size: 38px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+#skills span {
+  position: relative;
+}
+#skills span::before {
+  content: "";
+  display: block;
+  width: 117px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 80px;
+  left: 40px;
+}
+#skills .inner {
+  padding: 0 10%;
+  height: 470px;
+  box-sizing: border-box;
+  margin-top: 200px;
+}
+#skills .design {
+  margin-top: 150px;
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-weight: bold;
+}
+#skills .design ul {
+  display: flex;
+  justify-content: space-around;
+}
+#skills .design img {
+  margin-right: 38px;
+}
+#skills .design em {
+  position: relative;
+}
+#skills .design li {
+  line-height: 70px;
+  width: 283px !important;
+}
+#skills .design li:first-child em::before {
+  content: "★ ★ ★ ★ ★";
+  display: block;
+  font-family: "Krona One";
+  font-size: 18px;
+  color: #F7DA64;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+#skills .design li:nth-child(2) em::before {
+  content: "★ ★ ★ ★";
+  display: block;
+  font-family: "Krona One";
+  font-size: 18px;
+  color: #F7DA64;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+#skills .design li:nth-child(3) em::before {
+  content: "★ ★ ★ ★";
+  display: block;
+  font-family: "Krona One";
+  font-size: 18px;
+  color: #F7DA64;
+  width: 150px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+#skills .publishing {
+  margin-top: 85px;
+  font-family: "Pretendard";
+  font-size: 18px;
+  font-weight: bold;
+}
+#skills .publishing ul {
+  display: flex;
+  justify-content: space-around;
+}
+#skills .publishing img {
+  margin-right: 38px;
+}
+#skills .publishing em {
+  position: relative;
+}
+#skills .publishing li {
+  line-height: 70px;
+  width: 283px !important;
+}
+#skills .publishing li:first-child em::before {
+  content: "★ ★ ★ ★ ★";
+  display: block;
+  font-family: "Krona One";
+  font-size: 18px;
+  color: #F7DA64;
+  width: 150px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+#skills .publishing li:nth-child(2) em::before {
+  content: "★ ★ ★ ★";
+  display: block;
+  font-family: "Krona One";
+  font-size: 18px;
+  color: #F7DA64;
+  width: 150px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+#skills .publishing li:nth-child(3) em::before {
+  content: "★ ★ ★";
+  display: block;
+  font-family: "Krona One";
+  font-size: 18px;
+  color: #F7DA64;
+  width: 150px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+#main_bg2 {
+  background: url("../img/bg2.png") no-repeat;
+  width: 100%;
+  height: 1545px;
+  background-size: cover;
+  position: absolute;
+  top: 1700px;
+  left: -500px;
+  z-index: -99;
+  background-position: right;
+}
+
+#project {
+  position: relative;
+  margin-top: 350px;
+  padding: 0 10%;
+  /*모바일*/
+}
+#project .viewport {
+  overflow: hidden;
+}
+#project .slider-container {
+  margin-top: 150px;
+  height: 600px;
+  display: flex;
+}
+#project .inner {
+  height: 600px;
+  display: flex;
+  justify-content: space-around;
+  font-family: "Pretendard";
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+}
+#project h2 {
+  font-size: 38px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+#project em {
+  position: relative;
+}
+#project em::before {
+  content: "";
+  display: block;
+  width: 117px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 80px;
+  left: 60px;
+}
+#project .portfolio {
+  width: 80%;
+  height: 600px;
+  background: rgba(147, 147, 147, 0.4);
+  border-radius: 20px;
+  margin: 0 10% 0 5%;
+}
+#project .portfolio h4 {
+  position: relative;
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-left: 28%;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+#project .portfolio h4::before {
+  content: "PORTFOLIO";
+  display: block;
+  width: 150px;
+  height: 40px;
+  background: #3B7CD3;
+  color: #fff;
+  font-size: 15px;
+  font-family: "Krona One";
+  border-radius: 39px;
+  line-height: 40px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: -170px;
+}
+#project .portfolio1 p {
+  width: 41vw;
+  height: 470px;
+  background: url("../img/project1.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#project .portfolio2 p {
+  width: 41vw;
+  height: 470px;
+  background: url("../img/project2.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#project .portfolio3 p {
+  width: 41vw;
+  height: 470px;
+  background: url("../img/project3.png") no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#project .coment {
+  width: 60%;
+  margin-top: 300px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 2;
+}
+#project .coment .w_btn {
+  position: relative;
+  width: 250px;
+  height: 65px;
+  font-size: 14px;
+  font-family: "Krona One";
+  font-weight: normal;
+  margin-top: 60px;
+  background: #fff;
+  border-radius: 39px;
+  color: #000;
+  text-align: center;
+  line-height: 65px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#project .coment .w_btn a {
+  position: relative;
+  z-index: 10;
+}
+#project .coment .w_btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #000;
+  transition: width 0.5s ease;
+  border-radius: 30px;
+  z-index: 1;
+}
+#project .coment .w_btn:hover {
+  color: #fff;
+}
+#project .coment .w_btn:hover::before {
+  width: 100%;
+}
+#project .prev {
+  position: absolute;
+  top: 25%;
+  right: 29%;
+  cursor: pointer;
+}
+#project .next {
+  position: absolute;
+  top: 25%;
+  right: 20%;
+  cursor: pointer;
+}
+#project .swiper-pagination {
+  position: absolute;
+  top: 27%;
+  right: 24%;
+  font-size: 24px;
+}
+#project .m_inner {
+  display: none;
+  font-family: "Pretendard";
+}
+#project .m_inner .port {
+  margin-top: 130px;
+  width: 100%;
+  height: 850px;
+}
+#project .m_inner .port img {
+  width: 100%;
+  margin-bottom: 60px;
+  background: rgba(147, 147, 147, 0.3);
+  border-radius: 20px;
+}
+#project .m_inner .port p {
+  font-size: 22px;
+  font-weight: bold;
+}
+#project .m_inner .port span {
+  padding: 10px 12px;
+  font-weight: bold;
+  background: #3B7CD3;
+  border-radius: 39px;
+  font-family: "Krona One";
+  vertical-align: middle;
+  font-size: 12px;
+  margin-right: 20px;
+}
+#project .m_inner .port em::before {
+  display: none;
+}
+#project .m_inner .port em {
+  margin-top: 30px;
+  margin-bottom: 100px;
+  line-height: 1.8;
+  font-weight: bold;
+  font-size: 18px;
+}
+#project .m_inner .port .p_txt {
+  margin-left: 30px;
+  line-height: 2.5;
+}
+#project .m_inner .port .p_txt p {
+  margin-bottom: 20px;
+}
+#project .m_inner .port .m_btn {
+  margin-top: 30px;
+}
+#project .m_inner .port .m_btn a {
+  padding: 20px 30px;
+  background: #fff;
+  color: #000;
+  font-family: "Krona One";
+  font-size: 12px;
+  font-weight: normal;
+  border-radius: 39px;
+  transition: all 0.3s ease;
+}
+#project .m_inner .port .m_btn a:hover {
+  background: #000;
+  color: #fff;
+}
+#project .m_inner .port3 {
+  margin-top: 160px;
+}
+
+/*하단*/
+footer {
+  background: #000;
+  height: 100px;
+  margin-top: 120px;
+  text-align: center;
+}
+footer .end {
+  padding-top: 25px;
+  line-height: 1.7;
+}
+footer p {
+  font-size: 15px;
+  font-family: "Pretendard";
+}
+footer em {
+  font-size: 12px;
+  color: #555555;
+}
+
+/*미디어쿼리*/
+@media (max-width: 1440px) {
+  #main_view .text {
+    padding-top: 20%;
+  }
+  #project .portfolio h4::before {
+    width: 120px;
+    left: -135px;
+    font-size: 13px;
+  }
+  #project .prev img, #project .next img {
+    width: 45px;
+  }
+  #project .swiper-pagination {
+    font-size: 20px;
+    top: 26.5%;
+  }
+}
+@media (max-width: 1024px) {
+  #main_view .text {
+    padding-top: 25%;
+  }
+  #profile .info_box {
+    flex-wrap: wrap;
+  }
+  #profile .info_box .intro1 li:first-child::after {
+    width: 400px;
+  }
+  #profile .info_box .intro2 {
+    margin: 20px 0 0 280px;
+  }
+  #skills h2 {
+    text-align: left;
+  }
+  #skills span::before {
+    width: 350px;
+    left: 0;
+  }
+  #skills .inner {
+    margin-top: 250px;
+    height: 900px;
+  }
+  #skills .design ul {
+    flex-direction: column;
+  }
+  #skills .design li {
+    margin-bottom: 30px;
+  }
+  #skills .publishing {
+    margin-top: 0;
+  }
+  #skills .publishing ul {
+    flex-direction: column;
+  }
+  #skills .publishing li {
+    margin-bottom: 30px;
+  }
+  #project {
+    margin-top: 280px;
+  }
+  #project h2 {
+    text-align: left;
+  }
+  #project em::before {
+    width: 350px;
+    left: 0;
+  }
+  #project .portfolio {
+    width: 95%;
+    height: 500px;
+    margin: 0;
+  }
+  #project .portfolio h4 {
+    font-size: 20px;
+    margin-left: 35%;
+  }
+  #project .portfolio p {
+    margin: -50px 20px 0 30px;
+  }
+  #project .coment {
+    font-size: 18px;
+    margin-top: 200px;
+    margin-left: 60px;
+  }
+  #project .coment .w_btn {
+    width: 200px;
+    font-size: 12px;
+  }
+  #project .prev img, #project .next img {
+    width: 40px;
+  }
+  #project .prev {
+    right: 25%;
+  }
+  #project .next {
+    right: 13%;
+  }
+  #project .swiper-pagination {
+    right: 18%;
+  }
+}
+@media (max-width: 768px) {
+  header .inner {
+    padding: 0 5%;
+  }
+  header .inner #gnb {
+    display: none;
+  }
+  header .inner .m_burger {
+    display: block;
+    font-size: 23px;
+  }
+  #main_view .text {
+    padding-top: 40%;
+    font-size: 60px;
+  }
+  #main_view .text em {
+    font-size: 40px;
+  }
+  #profile .info_box {
+    margin-top: 160px;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  #profile .info_box h3 {
+    margin-bottom: 20px;
+  }
+  #profile .info_box .intro1 {
+    margin-bottom: 30px;
+  }
+  #profile .info_box .intro1 li:first-child {
+    margin-top: 20px;
+  }
+  #profile .info_box .intro1 li:first-child::after {
+    top: -30px;
+  }
+  #profile .info_box .intro2 {
+    margin: 0;
+  }
+  #skills .inner {
+    margin-top: 350px;
+  }
+  #project .viewport {
+    display: none;
+  }
+  #project .prev, #project .next, #project .swiper-pagination {
+    display: none;
+  }
+  #project .m_inner {
+    display: block;
+  }
+  footer {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 430px) {
+  header .inner {
+    padding: 0 3%;
+  }
+  #main_view {
+    height: 800px;
+  }
+  #main_view .text {
+    padding-left: 3%;
+    padding-top: 45%;
+    text-align: left;
+    font-size: 50px;
+  }
+  #main_view .text em {
+    font-size: 30px;
+  }
+  #main_view .btn {
+    margin: 0;
+    margin-left: 3%;
+    margin-top: 13%;
+    width: 250px;
+  }
+  #profile {
+    padding: 0 3%;
+  }
+  #profile .info_box h3 img {
+    width: 200px;
+  }
+  #profile .info_box .intro1 li:first-child::after {
+    width: 350px;
+  }
+  #skills .inner {
+    padding: 0 3%;
+  }
+  #project {
+    padding: 0 3%;
+  }
+  #project .m_inner .port {
+    height: 700px;
+  }
+  #project .m_inner .port p {
+    font-size: 18px;
+  }
+  #project .m_inner .port .p_txt {
+    margin-left: 10px;
+  }
+  #project .m_inner .port3 {
+    margin-top: 140px;
+  }
+  footer {
+    margin-top: 100px;
+  }
+  footer p {
+    font-size: 13px;
+  }
+  footer em {
+    font-size: 10px;
+  }
+}
+@media (max-width: 320px) {
+  header .inner {
+    padding: 0;
+  }
+  header .logo {
+    font-size: 15px;
+  }
+  #main_view {
+    height: 700px;
+  }
+  #main_view .text {
+    padding-left: 0;
+    letter-spacing: 1px;
+  }
+  #main_view .text em {
+    font-size: 25px;
+  }
+  #main_view .text b {
+    font-size: 45px;
+  }
+  #main_view .btn {
+    margin-left: 0;
+    margin-top: 17%;
+    width: 240px;
+    font-size: 13px;
+  }
+  #profile {
+    padding: 0;
+  }
+  #profile .info_box .intro1 li {
+    width: 300px;
+  }
+  #profile .info_box .intro1 em {
+    font-size: 18px;
+  }
+  #profile .info_box .intro1 li:first-child::after {
+    width: 280px;
+  }
+  #profile .info_box .intro1 li:first-child em {
+    margin-right: 36px;
+  }
+  #profile .info_box .intro1 li:nth-child(3) em {
+    margin-right: 57px;
+  }
+  #profile .info_box .intro1 li:first-child::before {
+    font-size: 30px;
+  }
+  #skills h2 {
+    font-size: 30px;
+  }
+  #skills span::before {
+    width: 280px;
+  }
+  #skills .inner {
+    padding: 0;
+  }
+  #skills .design img {
+    width: 80px;
+  }
+  #skills .publishing img {
+    width: 80px;
+  }
+  #project {
+    margin-top: 120px;
+    padding: 0;
+  }
+  #project h2 {
+    font-size: 30px;
+  }
+  #project em::before {
+    width: 280px;
+  }
+  #project .m_inner .port {
+    height: 570px;
+  }
+  #project .m_inner .port em {
+    font-size: 15px;
+  }
+  #project .m_inner .port .p_txt {
+    margin: 0;
+  }
+  #project .port2 {
+    margin-bottom: 190px;
+  }
+  footer {
+    margin-top: 150px;
+  }
+  footer .end p {
+    display: none;
+  }
+}
