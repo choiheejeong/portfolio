@@ -479,12 +479,19 @@ footer{
     .info_box{
       h3 img{width:200px;}
       .intro1{
+        li{width:300px;}
         li:first-child::after{width:350px;}
       }
     }
   }//e:#profile
   #skills{
     .inner{padding:0 3%;}
+    .design{
+      img{width:80px;}
+    }
+    .publishing{
+      img{width:80px;}
+    }
   }
   #project{
     padding:0 3%;
