@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*페이지 공통*/
 :root {
-  font-family: "Krona One";
+  font-family: "Krona One", serif;
   color: #fff;
   scroll-behavior: smooth;
 }
@@ -50,6 +50,27 @@ header #gnb li:first-child {
 }
 header .m_burger {
   display: none;
+  position: relative;
+  z-index: 101;
+}
+header .m_burger i {
+  font-size: 22px;
+}
+header .m_burger .xi-close {
+  display: none;
+}
+header .m_burger .open_menu {
+  transition: all 0.2s;
+}
+header .m_burger .open_menu.active .xi-bars {
+  display: none;
+}
+header .m_burger .open_menu.active .xi-close {
+  display: block;
+}
+header .menu {
+  display: none;
+  opacity: 0;
 }
 
 /*메인*/
@@ -689,13 +710,41 @@ footer em {
 @media (max-width: 768px) {
   header .inner {
     padding: 0 5%;
+    z-index: 120;
   }
   header .inner #gnb {
     display: none;
+    position: relative;
   }
   header .inner .m_burger {
     display: block;
     font-size: 23px;
+  }
+  header .menu {
+    display: none;
+    position: fixed;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    background: #000;
+    box-sizing: border-box;
+    padding-top: 90px;
+    text-align: right;
+    line-height: 2;
+    padding-right: 5%;
+    transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+  }
+  header .menu.active {
+    transform: translateX(0);
+    display: block;
+    opacity: 1;
+  }
+  header .menu.active #gnb > ul > li {
+    transform: translateX(0);
+    display: block;
   }
   #main_view .text {
     padding-top: 40%;
@@ -768,11 +817,20 @@ footer em {
   #profile .info_box h3 img {
     width: 200px;
   }
+  #profile .info_box .intro1 li {
+    width: 300px;
+  }
   #profile .info_box .intro1 li:first-child::after {
     width: 350px;
   }
   #skills .inner {
     padding: 0 3%;
+  }
+  #skills .design img {
+    width: 80px;
+  }
+  #skills .publishing img {
+    width: 80px;
   }
   #project {
     padding: 0 3%;
