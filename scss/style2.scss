@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+/*페이지 공통*/
+:root{
+    font-family:"Krona One";
+    color:#fff;
+    scroll-behavior:smooth;
+  }
+  body{background:#161616;}
+  a{text-decoration:none; color:inherit;}
+  .clearfix::after{content:''; display:block; clear:both;}
+  
+/*헤더*/
+header{
+    .inner{
+    position:relative; z-index:99;
+    padding:0 10%; box-sizing:border-box;
+    width:100%; height:80px;
+    display:flex; align-items:center; justify-content:space-between;
+    }//e:.inner
+    .logo{font-size:18px;}
+    #gnb{
+        font-size:15px;
+        li{display:inline-block;}
+        li:first-child{margin-right:70px;}
+    }
+}//e:header
+
+/*메인*/
+#main_bg{
+    background:url('../img/bg.png') no-repeat;
+    width:100%; height:1545px; background-size:cover;
+    position:fixed; top:0; right:0;
+    z-index:-99;
+}//e:#main_bg
+
+h2{
+  padding:0 10%; margin-top:70px;
+  font-size:30  px; letter-spacing:4px;
+}
+
+#all_pro{
+    width:100%; height:800px;
+    box-sizing:border-box; padding:0 10%;
+    margin-top:70px;
+    display:flex; justify-content:space-between;
+    .pro{
+      position:relative;
+      margin-right:30px;
+      width:100%; height:380px; background:rgba(147,147,147,.3);
+      border-radius:20px;
+      img{width:100%;}
+      .sub{
+        cursor:pointer;
+        opacity:0; transition:all .2s;
+        position:absolute; bottom:0; left:0;
+        background:rgba(6, 6, 6, 0.8);
+        width:100%; height:0; border-radius:20px;
+        font-family:'Pretendard'; text-align:center;
+        line-height:1.5; font-size:18px;
+        h4{font-size:22px; font-weight:bold; margin-top:20px;}
+      }//e:.sub
+    &:hover .sub{opacity:1; height:100px;}
+    }//e:.pro
+}//e:#all_pro
+
+
+/*하단*/
+footer{
+    background:#000; height:100px;
+    text-align:center;
+    .end{padding-top:25px; line-height:1.7;}
+    p{font-size:15px; font-family:'Pretendard';}
+    em{font-size:12px; color:#555555;}
+}//e:footer
