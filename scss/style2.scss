@@ -73,3 +73,16 @@ footer{
     p{font-size:15px; font-family:'Pretendard';}
     em{font-size:12px; color:#555555;}
 }//e:footer
+
+
+/*미디어쿼리*/
+@media (max-width:1400px) {
+  #all_pro{
+    flex-direction:column;
+    height:100%;
+    .pro{
+      width:50%; height:100%;
+      margin-bottom:120px;
+    }
+  }
+}//end:@media(1400px)
