@@ -25,8 +25,21 @@ header{
     li{display:inline-block;}
     li:first-child{margin-right:70px;}
   }
-  .m_burger{display:none;}
+  .m_burger{
+    display:none;
+    position:relative; z-index:101;
+    i{font-size:22px;}
+    .xi-close{display:none;}
+    .open_menu{
+      &.active{
+        .xi-bars{display:none;}
+        .xi-close{display:block;}
+      }
+    }
+  }//e:.m_burger
+  .menu{display:none;}
 }//e:header
+
 
 /*메인*/
 #main_view{
@@ -416,10 +429,21 @@ footer{
 @media (max-width:768px){
   header{
     .inner{
-      padding:0 5%;
-      #gnb{display:none;}
+      padding:0 5%; z-index:120;
+      #gnb{display:none; position:relative;}
       .m_burger{display:block; font-size:23px;}
     }
+    .menu{
+      display:none;
+      position:absolute; width:40%; height:100vh;
+      top:0; right:0; z-index:99; background:#000;
+      box-sizing:border-box; padding-top:90px;
+      text-align:right; line-height:2; padding-right:5%;
+      transform:translateX(100%);
+      transition:all .3s ease-in-out;
+      &.active{transform:translateX(0); display:block;}
+      &.active #gnb>ul>li{transform:translateX(0); display:block;}
+    }//e:.menu
   }//e:header
   #main_view{
     .text{
