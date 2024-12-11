@@ -1,6 +1,6 @@
 /*스크롤*/
 var sgc1 = new ScrollGiveClass("header .inner",{
-    baseline:200,
+    baseline:100,
 });
 
 
