@@ -37,7 +37,7 @@ header{
       }
     }
   }//e:.m_burger
-  .menu{display:none;}
+  .menu{display:none; opacity:0;}
 }//e:header
 
 
@@ -434,14 +434,13 @@ footer{
       .m_burger{display:block; font-size:23px;}
     }
     .menu{
-      display:none;
       position:absolute; width:40%; height:100vh;
       top:0; right:0; z-index:99; background:#000;
       box-sizing:border-box; padding-top:90px;
       text-align:right; line-height:2; padding-right:5%;
       transform:translateX(100%);
       transition:all .3s ease-in-out;
-      &.active{transform:translateX(0); display:block;}
+      &.active{transform:translateX(0); display:block; opacity:1;}
       &.active #gnb>ul>li{transform:translateX(0); display:block;}
     }//e:.menu
   }//e:header
