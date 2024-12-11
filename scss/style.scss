@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
 /*페이지 공통*/
 :root{
@@ -32,6 +31,7 @@ header{
     i{font-size:22px;}
     .xi-close{display:none;}
     .open_menu{
+      transition:all .2s;
       &.active{
         .xi-bars{display:none;}
         .xi-close{display:block;}
@@ -436,7 +436,7 @@ footer{
     }
     .menu{
       display:none;
-      position:absolute; width:40%; height:100vh;
+      position:fixed; width:40%; height:100%;
       top:0; right:0; z-index:99; background:#000;
       box-sizing:border-box; padding-top:90px;
       text-align:right; line-height:2; padding-right:5%;
