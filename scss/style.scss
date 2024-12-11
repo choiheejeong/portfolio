@@ -434,6 +434,7 @@ footer{
       .m_burger{display:block; font-size:23px;}
     }
     .menu{
+      display:none;
       position:absolute; width:40%; height:100vh;
       top:0; right:0; z-index:99; background:#000;
       box-sizing:border-box; padding-top:90px;
