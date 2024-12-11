@@ -25,7 +25,7 @@ const project = new Swiper('#project .viewport', {
 });
 
 
-/*메뉴
+/*메뉴*/
 var menu_btn = document.querySelector(".open_menu");
 var menu = document.querySelector(".menu");
 
@@ -34,4 +34,3 @@ menu_btn.addEventListener("click",function(e){
   menu.classList.toggle("active");
   menu_btn.classList.toggle("active"); 
 });
-*/
