@@ -48,6 +48,12 @@ header #gnb li {
 header #gnb li:first-child {
   margin-right: 70px;
 }
+header #gnb a {
+  transition: all 0.3s;
+}
+header #gnb a:hover {
+  text-shadow: 2px 2px 2px #4a90e2;
+}
 header .m_burger {
   display: none;
   position: relative;

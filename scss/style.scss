@@ -24,6 +24,8 @@ header{
     font-size:15px;
     li{display:inline-block;}
     li:first-child{margin-right:70px;}
+    a{transition:all .3s;}
+    a:hover{text-shadow:2px 2px 2px #4a90e2;}
   }
   .m_burger{
     display:none;
