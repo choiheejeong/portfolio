@@ -266,6 +266,7 @@ header .menu {
 }
 #skills .design em {
   position: relative;
+  white-space: nowrap;
 }
 #skills .design li {
   line-height: 70px;
