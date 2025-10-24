@@ -180,7 +180,7 @@ header{
     ul{display:flex; justify-content:space-around;}
     img{margin-right:38px;}
     em{position:relative;}
-    li{line-height:70px; width:283px !important;}
+    li{line-height:70px; width:290px !important;}
     li:first-child em::before{
       content:'★ ★ ★ ★ ★'; display:block;
       font-family:"Krona One"; font-size:18px;
@@ -609,6 +609,7 @@ footer{
   }
 
 }//end:@meida(320px)
+
 
 
 
