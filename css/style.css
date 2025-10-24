@@ -269,7 +269,7 @@ header .menu {
 }
 #skills .design li {
   line-height: 70px;
-  width: 283px !important;
+  width: 286px !important;
 }
 #skills .design li:first-child em::before {
   content: "★ ★ ★ ★ ★";
