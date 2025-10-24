@@ -147,13 +147,12 @@ header{
     font-size:18px; font-weight:bold;
     ul{display:flex; justify-content:space-around;}
     img{margin-right:38px;}
-    em{position:relative;}
+    em{position:relative; white-space:nowrap;}
     li{line-height:70px; width:286px !important;}
     li:first-child em::before,
     li:nth-child(2) em::before,
     li:nth-child(3) em::before{
-    white-space: nowrap;            /* 별이 줄바꿈 안 되게 */
-    display: inline-block;          /* 인라인박스로 고정 */
+    white-space:nowrap;
     }
     li:first-child em::before{
       content:'★ ★ ★ ★ ★'; display:block;
@@ -610,4 +609,5 @@ footer{
   }
 
 }//end:@meida(320px)
+
 
