@@ -324,7 +324,7 @@ header .menu {
 }
 #skills .publishing li {
   line-height: 70px;
-  width: 283px !important;
+  width: 290px !important;
 }
 #skills .publishing li:first-child em::before {
   content: "★ ★ ★ ★ ★";
