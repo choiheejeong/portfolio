@@ -149,6 +149,12 @@ header{
     img{margin-right:38px;}
     em{position:relative;}
     li{line-height:70px; width:286px !important;}
+    li:first-child em::before,
+    li:nth-child(2) em::before,
+    li:nth-child(3) em::before{
+    white-space: nowrap;            /* 별이 줄바꿈 안 되게 */
+    display: inline-block;          /* 인라인박스로 고정 */
+    }
     li:first-child em::before{
       content:'★ ★ ★ ★ ★'; display:block;
       font-family:"Krona One"; font-size:18px;
@@ -604,3 +610,4 @@ footer{
   }
 
 }//end:@meida(320px)
+
