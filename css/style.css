@@ -280,6 +280,7 @@ header .menu {
   position: absolute;
   top: 5px;
   left: 0;
+  white-space: nowrap; 
 }
 #skills .design li:nth-child(2) em::before {
   content: "★ ★ ★ ★";
@@ -290,6 +291,7 @@ header .menu {
   position: absolute;
   top: 5px;
   left: 0;
+  white-space: nowrap; 
 }
 #skills .design li:nth-child(3) em::before {
   content: "★ ★ ★ ★";
@@ -301,6 +303,7 @@ header .menu {
   position: absolute;
   top: 5px;
   left: 0;
+  white-space: nowrap; 
 }
 #skills .publishing {
   margin-top: 85px;
