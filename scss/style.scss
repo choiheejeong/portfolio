@@ -148,7 +148,7 @@ header{
     ul{display:flex; justify-content:space-around;}
     img{margin-right:38px;}
     em{position:relative; white-space:nowrap;}
-    li{line-height:70px; width:286px !important;}
+    li{line-height:70px; width:290px !important;}
     li:first-child em::before,
     li:nth-child(2) em::before,
     li:nth-child(3) em::before{
@@ -609,5 +609,6 @@ footer{
   }
 
 }//end:@meida(320px)
+
 
 
